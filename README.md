@@ -8,9 +8,9 @@
 [![Language](https://img.shields.io/badge/Language-Compact%200.26-blue?style=for-the-badge)](https://docs.midnight.network)
 [![Toolchain](https://img.shields.io/badge/Compiler-v0.34.0-emerald?style=for-the-badge)](https://github.com/midnightntwrk/compact)
 [![Tests](https://img.shields.io/badge/Tests-16%2F16%20Passing-success?style=for-the-badge)](https://vitest.dev)
-[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions%20Passing-success?style=for-the-badge&logo=githubactions)](https://github.com)
-[![Frontend](https://img.shields.io/badge/Frontend-Vite%20%7C%20Stitch%20Obsidian%20Cipher-blueviolet?style=for-the-badge)](http://localhost:5173)
-[![Phase](https://img.shields.io/badge/Phase-Level%203%3A%20First%20Quarter%20%F0%9F%8C%93-purple?style=for-the-badge)](#)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions%20Passing-success?style=for-the-badge&logo=githubactions)](https://github.com/Pranjal-debug/AuraVote/actions)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen?style=for-the-badge&logo=github)](https://pranjal-debug.github.io/AuraVote/)
+[![Phase](https://img.shields.io/badge/Phase-Level%204%3A%20Waxing%20Gibbous%20%F0%9F%8C%94-purple?style=for-the-badge)](#)
 
 </div>
 
@@ -221,6 +221,7 @@ auravote/
 │       ├── keys/                  # SNARK prover and verifier keys (.prover, .verifier)
 │       └── zkir/                  # Zero-Knowledge Intermediate Representation (.zkir)
 ├── docs/
+│   ├── LEVEL_4_ONBOARDING.md      # User onboarding walkthrough and live demo guide
 │   ├── media/                     # Walkthrough demo video recording (auravote-demo.webp)
 │   └── screenshots/               # High-res SVG & PNG proof captures
 │       ├── app_initial_load.png
@@ -244,8 +245,10 @@ auravote/
 │       └── integration.test.ts    # 7/7 End-to-end integration tests (wallet + circuit)
 ├── .github/
 │   └── workflows/
-│       └── ci.yml                 # Automated CI/CD pipeline (typecheck + tests + build)
+│       ├── ci.yml                 # Automated CI/CD pipeline (typecheck + tests + build)
+│       └── deploy-pages.yml       # Automated GitHub Pages frontend deployment
 ├── index.html                     # Premium Obsidian Cipher dark-mode UI
+├── vite.config.ts                 # Vite bundler configuration
 ├── SUBMISSION_THE_TURN.md         # Formal Architectural Specification for The Turn
 ├── package.json
 ├── tsconfig.json
@@ -269,7 +272,7 @@ The complete architectural specification, formal privacy proof breakdown, and Ma
 - [x] **🌑 Level 1 - New Moon**: Toolchain setup, Compact contract written, compiled `managed/` circuits + keys, 9/9 tests passing, deployed to Preprod, detailed architecture README.
 - [x] **🌒 Level 2 - Waxing Crescent**: Frontend integration with Lace wallet connection on Preprod, interactive ballot casting UI, observable privacy demonstration, demo recording.
 - [x] **🌓 Level 3 - First Quarter & The Turn**: Production-grade dApp, 16/16 tests passing, CI/CD pipeline running on GitHub Actions, formal proposal submitted in [SUBMISSION_THE_TURN.md](./SUBMISSION_THE_TURN.md).
-- [ ] **🌔 Level 4 - Waxing Gibbous**: MVP live on Preprod, public product profile, and technical documentation.
+- [x] **🌔 Level 4 - Waxing Gibbous**: MVP live on Preprod & GitHub Pages ([Live Demo](https://pranjal-debug.github.io/AuraVote/)), public product onboarding guide in [LEVEL_4_ONBOARDING.md](./docs/LEVEL_4_ONBOARDING.md).
 - [ ] **🌕 Level 5 - Full Moon**: User testing with living feedback loop and 50 Preprod users.
 - [ ] **🌝 Level 6 - Supermoon**: Mainnet deployment and launch.
 
