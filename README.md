@@ -169,7 +169,7 @@ A side-by-side verification matrix showing exactly what the public ledger record
 ### 1. Installation
 Clone the repository and install dependencies:
 ```bash
-git clone https://github.com/your-username/AuraVote.git
+git clone https://github.com/Pranjal-debug/AuraVote.git
 cd AuraVote
 npm install
 ```

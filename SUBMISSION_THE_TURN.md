@@ -6,6 +6,7 @@
 **Selected Problem Statement**: **Private Voting — anonymous ballots with publicly verifiable tallies**  
 **Live Preprod Contract**: `027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934`  
 **Explorer Link**: [https://explorer.preprod.midnight.network/contract/027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934](https://explorer.preprod.midnight.network/contract/027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934)  
+**GitHub Repository**: [https://github.com/Pranjal-debug/AuraVote](https://github.com/Pranjal-debug/AuraVote)  
 **Walkthrough Demo Video**: [`docs/media/auravote-demo.webp`](./docs/media/auravote-demo.webp)  
 
 ---
