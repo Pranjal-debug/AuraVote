@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="880" height="928" viewBox="0 0 880 928" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="880" height="928" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <!-- Window Header -->
+  <rect width="880" height="44" rx="12" fill="#161b22"/>
+  <rect y="42" width="880" height="2" fill="#30363d"/>
+  <!-- Window Controls -->
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="440" y="27" fill="#8b949e" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle" font-weight="500">Terminal — compact compile (AuraVote)</text>
+  <!-- Content -->
+  <g>
+    <text x="24" y="90" fill="#94a3b8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">$ npm run compile</text>
+    <text x="24" y="112" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="134" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 ========================================================</text>
+    <text x="24" y="156" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 Midnight Compact Compiler Runner — AuraVote Protocol</text>
+    <text x="24" y="178" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 ========================================================</text>
+    <text x="24" y="200" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="222" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🔨 Source Contract : contract/auravote.compact</text>
+    <text x="24" y="244" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">📦 Target Output   : contract/managed/auravote</text>
+    <text x="24" y="266" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">⚡ Mode            : Full Proving Key &amp; ZKIR Generation</text>
+    <text x="24" y="288" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">⏳ Running Compact compiler...</text>
+    <text x="24" y="310" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="332" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🔄 Invoking Midnight Compact compiler in WSL: ~/.local/bin/compact compile ...</text>
+    <text x="24" y="354" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">Compiling 3 circuits: [cast_vote, register_voter, close_election]</text>
+    <text x="24" y="376" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="398" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">✅ Compilation Succeeded!</text>
+    <text x="24" y="420" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">📂 Generated Artifacts in contract/managed/auravote:</text>
+    <text x="24" y="442" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="464" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">  📁 [Zero-Knowledge Intermediate Representation (Circuits)] zkir/</text>
+    <text x="24" y="486" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • cast_vote.bzkir              (0.9 KB)</text>
+    <text x="24" y="508" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • cast_vote.zkir               (12.2 KB)</text>
+    <text x="24" y="530" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • close_election.bzkir         (0.1 KB)</text>
+    <text x="24" y="552" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • close_election.zkir          (0.9 KB)</text>
+    <text x="24" y="574" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • register_voter.bzkir         (0.3 KB)</text>
+    <text x="24" y="596" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • register_voter.zkir          (4.4 KB)</text>
+    <text x="24" y="618" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="640" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">  📁 [Zero-Knowledge SNARK Prover &amp; Verifier Keys] keys/</text>
+    <text x="24" y="662" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • cast_vote.prover             (5094.2 KB)</text>
+    <text x="24" y="684" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • cast_vote.verifier           (2.1 KB)</text>
+    <text x="24" y="706" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • close_election.prover        (13.8 KB)</text>
+    <text x="24" y="728" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • close_election.verifier      (1.3 KB)</text>
+    <text x="24" y="750" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • register_voter.prover        (2751.4 KB)</text>
+    <text x="24" y="772" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • register_voter.verifier      (2.1 KB)</text>
+    <text x="24" y="794" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="816" fill="#c084fc" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">  📁 [TypeScript &amp; JavaScript Contract Bindings] contract/</text>
+    <text x="24" y="838" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • index.d.ts                   (3.5 KB)</text>
+    <text x="24" y="860" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     • index.js                     (71.2 KB)</text>
+    <text x="24" y="882" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="904" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🌟 Ready for tests and Preprod deployment!</text>
+  </g>
+</svg>

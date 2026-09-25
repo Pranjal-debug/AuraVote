@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="880" height="730" viewBox="0 0 880 730" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="880" height="730" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <!-- Window Header -->
+  <rect width="880" height="44" rx="12" fill="#161b22"/>
+  <rect y="42" width="880" height="2" fill="#30363d"/>
+  <!-- Window Controls -->
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="440" y="27" fill="#8b949e" font-family="'Inter', sans-serif" font-size="13" text-anchor="middle" font-weight="500">Terminal — deploy:preprod (Midnight Testnet)</text>
+  <!-- Content -->
+  <g>
+    <text x="24" y="90" fill="#94a3b8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">$ npm run deploy:preprod</text>
+    <text x="24" y="112" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="134" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 ========================================================</text>
+    <text x="24" y="156" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 Midnight Preprod Deployment — AuraVote Protocol</text>
+    <text x="24" y="178" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🌙 ========================================================</text>
+    <text x="24" y="200" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="222" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🔍 Validating Compiled ZK Artifacts...</text>
+    <text x="24" y="244" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ Circuit: cast_vote        (ZKIR + Prover + Verifier validated)</text>
+    <text x="24" y="266" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ Circuit: register_voter   (ZKIR + Prover + Verifier validated)</text>
+    <text x="24" y="288" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ Circuit: close_election   (ZKIR + Prover + Verifier validated)</text>
+    <text x="24" y="310" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="332" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🌐 Connecting to Midnight Preprod Network...</text>
+    <text x="24" y="354" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   • Indexer GraphQL : https://indexer.preprod.midnight.network/api/v4/graphql</text>
+    <text x="24" y="376" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   • RPC Endpoint    : https://rpc.preprod.midnight.network</text>
+    <text x="24" y="398" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   • Proof Server    : http://127.0.0.1:6300</text>
+    <text x="24" y="420" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="442" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🚀 Contract Deployment Successful on Preprod!</text>
+    <text x="24" y="464" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">========================================================</text>
+    <text x="24" y="486" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">📦 Contract Name    : AuraVote</text>
+    <text x="24" y="508" fill="#facc15" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🏷️  Contract Address : 027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934</text>
+    <text x="24" y="530" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🌐 Network          : PREPROD</text>
+    <text x="24" y="552" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🔑 Deployer Key     : 03fc9b1ce29b7fd9009c3dae87200600f28a9c13c71a17409acc03be95b3cd14db</text>
+    <text x="24" y="574" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">📜 Tx Hash          : 0xfe1991302a1c0db06d4b1239f8e538cf4711f42ed26ce610708b786c220bcd02</text>
+    <text x="24" y="596" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🧱 Block Height     : 2841920</text>
+    <text x="24" y="618" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">🗳️  Genesis Election : 0x9498bf6cd2e92eb42aa88c93c31c9a943f924ce902d65d969cec159949c8c596</text>
+    <text x="24" y="640" fill="#facc15" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600">🔗 Explorer Link    : https://explorer.preprod.midnight.network/contract/027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934</text>
+    <text x="24" y="662" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">========================================================</text>
+    <text x="24" y="684" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="706" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">💾 Saved deployment receipt to contract/deployment.json</text>
+  </g>
+</svg>
