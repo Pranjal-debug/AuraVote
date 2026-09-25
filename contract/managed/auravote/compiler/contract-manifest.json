@@ -1,0 +1,98 @@
+{
+  "manifest-version": "1",
+  "compiler-version": "0.34.0",
+  "language-version": "0.26.0",
+  "runtime-version": "0.19.0",
+  "compiler": {
+    "type": "directory",
+    "contract-info.json": {
+      "type": "file",
+      "size": 3986,
+      "hash": "806e1892e190210f02e377e771142534f4e721f0315e6322331e338d3aa84af4"
+    }
+  },
+  "contract": {
+    "type": "directory",
+    "index.d.ts": {
+      "type": "file",
+      "size": 3609,
+      "hash": "7c5e21eed7a5d7fa3a89c7e25e58f7de0dd53d3b2866debe8aab2aaad7b69b79"
+    },
+    "index.js": {
+      "type": "file",
+      "size": 72859,
+      "hash": "4b0bdd6f56b8e57a6357e5756f71a224095ae0cd231ad99c734fde3b2fea1cd2"
+    },
+    "index.js.map": {
+      "type": "file",
+      "size": 2614,
+      "hash": "5fe153befaef64d95a9fe25d2d6e1756552d2559503e5429e99619613d8ecd9c"
+    }
+  },
+  "zkir": {
+    "type": "directory",
+    "cast_vote.bzkir": {
+      "type": "file",
+      "size": 871,
+      "hash": "4e6e922daa5589e51cb8d1b272b70ea0381c083c2ce16ef6bb1c0766357cee8a"
+    },
+    "cast_vote.zkir": {
+      "type": "file",
+      "size": 12516,
+      "hash": "548a8540c7b7d0200f13acf455ec11e2e1c324b9877c651716b704dc07638cc4"
+    },
+    "close_election.bzkir": {
+      "type": "file",
+      "size": 71,
+      "hash": "eb41ee6fac4690cceec88c610daa64614df25a34fbb9ba81806440d93387b7f5"
+    },
+    "close_election.zkir": {
+      "type": "file",
+      "size": 964,
+      "hash": "ce9ac62b55d0162cd7b08e232ba36d2de9c3be49fcf23e5b4b4508da2b5b4699"
+    },
+    "register_voter.bzkir": {
+      "type": "file",
+      "size": 278,
+      "hash": "cccc66c3b29989d3b7354b397df3a5597973dcc1f4a4f583a59dfbc0407b2d48"
+    },
+    "register_voter.zkir": {
+      "type": "file",
+      "size": 4530,
+      "hash": "15e4a29fb3f53c7ca66f84bca86b963c26aa5e8e7be9ab087a72e4344f87b2a5"
+    }
+  },
+  "keys": {
+    "type": "directory",
+    "cast_vote.prover": {
+      "type": "file",
+      "size": 5216432,
+      "hash": "972ee506c8e5997b041e595d99a193b84b74189ead630d46869e8146a822c86a"
+    },
+    "cast_vote.verifier": {
+      "type": "file",
+      "size": 2119,
+      "hash": "90da15a7f19e98ff29aa66c99bca0a8e49a9ba24f32d3ccd5ec6c3ec027bd6ff"
+    },
+    "close_election.prover": {
+      "type": "file",
+      "size": 14097,
+      "hash": "f32d5f5649eca9279fc43d90084ba6908ddeedb925c4afc3067f7c4ea63fc937"
+    },
+    "close_election.verifier": {
+      "type": "file",
+      "size": 1351,
+      "hash": "e1a2b1c46440beb4cd72f91c3972a52af6c7fea5f849b0505e88d7e1d9e4aa1a"
+    },
+    "register_voter.prover": {
+      "type": "file",
+      "size": 2817461,
+      "hash": "136f6337c4aed93e6351730d3c48e5eed4aed8c7bc03e20619bb5bc1dd9ac1e0"
+    },
+    "register_voter.verifier": {
+      "type": "file",
+      "size": 2119,
+      "hash": "fff68deac9c10a094f9506f62dcef3c53dd17444969819e8cc23327ed81f7b82"
+    }
+  }
+}
