@@ -1,0 +1,102 @@
+// auravote.compact
+// AuraVote: Privacy-Preserving Voting Protocol on Midnight Network
+//
+// Core Privacy Model:
+// 1. Voters register by committing their identity on-chain: persistentCommit([domain, secret], randomness)
+// 2. Voting circuit proves membership in the voter tree via ZK Merkle Proof without revealing leaf index or voter identity
+// 3. Nullifier derivation prevents double-voting without revealing voter secret
+// 4. Tallies are incremented on-chain without revealing who cast which ballot
+
+pragma language_version 0.26;
+
+import CompactStandardLibrary;
+
+// Public Ledger State
+export ledger electionId: Bytes<32>;
+export ledger voterRegistry: HistoricMerkleTree<10, Bytes<32>>;
+export ledger usedNullifiers: Set<Bytes<32>>;
+export ledger yesVotes: Counter;
+export ledger noVotes: Counter;
+export ledger totalBallots: Counter;
+export ledger isClosed: Boolean;
+
+// Witnesses (Private off-chain inputs supplied by voter's local wallet/prover)
+witness voter_secret(): Bytes<32>;
+witness voter_randomness(): Bytes<32>;
+witness get_voter_path(commitment: Bytes<32>): MerkleTreePath<10, Bytes<32>>;
+witness voter_choice(): Uint<8>; // 1 for YES, 0 for NO
+
+// Cryptographic Circuits
+circuit derive_voter_commitment(secret: Bytes<32>, randomness: Bytes<32>): Bytes<32> {
+  return persistentCommit<Vector<2, Bytes<32>>>(
+    [pad(32, "auravote:voter:"), secret],
+    randomness
+  );
+}
+
+circuit derive_vote_nullifier(secret: Bytes<32>, election: Bytes<32>): Bytes<32> {
+  return persistentHash<Vector<3, Bytes<32>>>([
+    pad(32, "auravote:nullifier:"),
+    election,
+    secret
+  ]);
+}
+
+// Register an eligible voter commitment into the voter tree
+export circuit register_voter(voterCommitment: Bytes<32>): [] {
+  assert(!isClosed, "Election is closed");
+  voterRegistry.insert(disclose(voterCommitment));
+}
+
+// Cast an anonymous ballot
+export circuit cast_vote(): [] {
+  assert(!isClosed, "Election is closed");
+
+  const secret = voter_secret();
+  const randomness = voter_randomness();
+  const choice = voter_choice();
+
+  // Choice must be binary (0 or 1)
+  assert(choice == 0 || choice == 1, "Invalid ballot choice");
+
+  // Re-derive commitment to verify inclusion
+  const commitment = derive_voter_commitment(secret, randomness);
+
+  // Fetch Merkle proof from witness
+  const path = get_voter_path(commitment);
+
+  // Soundness check: bind the leaf to this voter's commitment
+  assert(path.leaf == commitment, "Merkle path does not match commitment");
+
+  // Verify that the voter's commitment is in the historical root
+  assert(
+    voterRegistry.checkRoot(disclose(merkleTreePathRoot<10, Bytes<32>>(path))),
+    "Voter commitment not found in eligible registry"
+  );
+
+  // Derive unique nullifier for this voter and election
+  const nullifier = derive_vote_nullifier(secret, electionId);
+
+  // Nullifier check: voter has not already voted
+  assert(
+    disclose(!usedNullifiers.member(disclose(nullifier))),
+    "Double voting prevented: voter has already cast a ballot"
+  );
+
+  // Mark nullifier as used on public ledger
+  usedNullifiers.insert(disclose(nullifier));
+
+  // Tally the ballot: the vote choice for this ballot is deliberately disclosed
+  // to update the public counter, while the voter's secret and leaf index remain private.
+  if (disclose(choice == 1)) {
+    yesVotes.increment(1);
+  } else {
+    noVotes.increment(1);
+  }
+  totalBallots.increment(1);
+}
+
+// Close election (admin/coordinator)
+export circuit close_election(): [] {
+  isClosed = true;
+}
