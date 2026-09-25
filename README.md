@@ -7,9 +7,10 @@
 [![Midnight Testnet](https://img.shields.io/badge/Midnight-Preprod%20Testnet-blueviolet?style=for-the-badge&logo=shield)](https://explorer.preprod.midnight.network/contract/027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934)
 [![Language](https://img.shields.io/badge/Language-Compact%200.26-blue?style=for-the-badge)](https://docs.midnight.network)
 [![Toolchain](https://img.shields.io/badge/Compiler-v0.34.0-emerald?style=for-the-badge)](https://github.com/midnightntwrk/compact)
-[![Tests](https://img.shields.io/badge/Tests-9%2F9%20Passing-success?style=for-the-badge)](https://vitest.dev)
+[![Tests](https://img.shields.io/badge/Tests-16%2F16%20Passing-success?style=for-the-badge)](https://vitest.dev)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub%20Actions%20Passing-success?style=for-the-badge&logo=githubactions)](https://github.com)
 [![Frontend](https://img.shields.io/badge/Frontend-Vite%20%7C%20Stitch%20Obsidian%20Cipher-blueviolet?style=for-the-badge)](http://localhost:5173)
-[![Phase](https://img.shields.io/badge/Phase-Level%202%3A%20Waxing%20Crescent%20%F0%9F%8C%92-purple?style=for-the-badge)](#)
+[![Phase](https://img.shields.io/badge/Phase-Level%203%3A%20First%20Quarter%20%F0%9F%8C%93-purple?style=for-the-badge)](#)
 
 </div>
 
@@ -107,13 +108,14 @@ Explorer Link    : https://explorer.preprod.midnight.network/contract/027562d726
 
 ---
 
-### 3. Automated Test Suite (9/9 Tests Passing)
-Vitest automated test suite validating managed artifacts, cryptographic domain separation, witness isolation, and double-voting prevention:
+### 3. Automated Test Suite (16/16 Tests Passing)
+Vitest automated test suite validating managed artifacts, cryptographic domain separation, witness isolation, wallet connectors, and double-voting prevention:
 
 ```bash
 $ npm test
-✓ src/test/auravote.test.ts (9 tests) 28ms
-Test Files: 1 passed (1) | Tests: 9 passed (9)
+✓ src/test/auravote.test.ts (9 tests) 29ms
+✓ src/test/integration.test.ts (7 tests) 5045ms
+Test Files: 2 passed (2) | Tests: 16 passed (16) | Duration: 6.40s
 ```
 
 <p align="center">
@@ -238,8 +240,13 @@ auravote/
 │   │   ├── wallet.ts              # Midnight Lace DApp connector integration
 │   │   └── zk-prover.ts           # Client-side ZK proof synthesizer & nullifier logic
 │   └── test/
-│       └── auravote.test.ts       # 9/9 Vitest tests covering ZK, state, and nullifiers
+│       ├── auravote.test.ts       # 9/9 Unit tests covering ZK, state, and nullifiers
+│       └── integration.test.ts    # 7/7 End-to-end integration tests (wallet + circuit)
+├── .github/
+│   └── workflows/
+│       └── ci.yml                 # Automated CI/CD pipeline (typecheck + tests + build)
 ├── index.html                     # Premium Obsidian Cipher dark-mode UI
+├── SUBMISSION_THE_TURN.md         # Formal Architectural Specification for The Turn
 ├── package.json
 ├── tsconfig.json
 ├── vitest.config.ts
@@ -248,14 +255,21 @@ auravote/
 
 ---
 
+## 🌓 Idea Submission: The Turn (Problem Statement 1)
+
+AuraVote addresses **Private Voting — anonymous ballots with publicly verifiable tallies** from the provided cohort problem statements.
+
+The complete architectural specification, formal privacy proof breakdown, and Mainnet rollout plan are documented in:
+📄 **[SUBMISSION_THE_TURN.md](./SUBMISSION_THE_TURN.md)**
+
+---
+
 ## 🌕 Lunar Cycle Roadmap
 
 - [x] **🌑 Level 1 - New Moon**: Toolchain setup, Compact contract written, compiled `managed/` circuits + keys, 9/9 tests passing, deployed to Preprod, detailed architecture README.
 - [x] **🌒 Level 2 - Waxing Crescent**: Frontend integration with Lace wallet connection on Preprod, interactive ballot casting UI, observable privacy demonstration, demo recording.
-- [ ] **🌓 Level 3 - First Quarter**: Production-grade dApp, CI/CD pipeline (GitHub Actions), submission proposal for "The Turn" (Private Voting problem statement).
+- [x] **🌓 Level 3 - First Quarter & The Turn**: Production-grade dApp, 16/16 tests passing, CI/CD pipeline running on GitHub Actions, formal proposal submitted in [SUBMISSION_THE_TURN.md](./SUBMISSION_THE_TURN.md).
 - [ ] **🌔 Level 4 - Waxing Gibbous**: MVP live on Preprod, public product profile, and technical documentation.
-- [ ] **🌕 Level 5 - Full Moon**: User testing with living feedback loop and 50 Preprod users.
-- [ ] **🌝 Level 6 - Supermoon**: Mainnet deployment and launch.
 - [ ] **🌕 Level 5 - Full Moon**: User testing with living feedback loop and 50 Preprod users.
 - [ ] **🌝 Level 6 - Supermoon**: Mainnet deployment and launch.
 
