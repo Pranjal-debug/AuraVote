@@ -8,7 +8,8 @@
 [![Language](https://img.shields.io/badge/Language-Compact%200.26-blue?style=for-the-badge)](https://docs.midnight.network)
 [![Toolchain](https://img.shields.io/badge/Compiler-v0.34.0-emerald?style=for-the-badge)](https://github.com/midnightntwrk/compact)
 [![Tests](https://img.shields.io/badge/Tests-9%2F9%20Passing-success?style=for-the-badge)](https://vitest.dev)
-[![Phase](https://img.shields.io/badge/Phase-Level%201%3A%20New%20Moon%20%F0%9F%8C%91-purple?style=for-the-badge)](#)
+[![Frontend](https://img.shields.io/badge/Frontend-Vite%20%7C%20Stitch%20Obsidian%20Cipher-blueviolet?style=for-the-badge)](http://localhost:5173)
+[![Phase](https://img.shields.io/badge/Phase-Level%202%3A%20Waxing%20Crescent%20%F0%9F%8C%92-purple?style=for-the-badge)](#)
 
 </div>
 
@@ -121,6 +122,41 @@ Test Files: 1 passed (1) | Tests: 9 passed (9)
 
 ---
 
+### 4. Interactive Frontend dApp & Lace Wallet Connection (Level 2)
+The frontend is built using **Obsidian Cipher** styling generated via Stitch:
+- Seamless **Lace Wallet** connection on Midnight Preprod with real-time DUST/tNIGHT balances.
+- Cryptographically sealed voter vault with ephemeral client-side witness management.
+- Real-time consensus statistics with glowing dual-progress indicators.
+
+<p align="center">
+  <img src="docs/screenshots/app_initial_load.png" alt="AuraVote dApp Dashboard with Lace Wallet Connected" width="100%" />
+</p>
+
+---
+
+### 5. Observable Zero-Knowledge Privacy Claim & Ballot Execution
+**How AuraVote Proves Without Revealing:**
+1. **Membership Proven in Zero-Knowledge**: The voter proves that their identity commitment belongs to the Historic Merkle Tree without disclosing which leaf index is theirs.
+2. **Double-Voting Mathematically Prevented**: The circuit derives a deterministic nullifier `persistentHash(["auravote:nullifier:", electionId, secret])`. The ledger marks the nullifier as spent. An observer verifies that each voter votes exactly once, but cannot correlate the nullifier back to the voter's identity or registration.
+3. **Execution Steps in Client-Side Prover**: The 4-step Groth16 synthesis executes in ~500ms directly in the browser:
+
+<p align="center">
+  <img src="docs/screenshots/zk_modal_success.png" alt="Zero-Knowledge Ballot Execution Modal and Receipt" width="100%" />
+</p>
+
+---
+
+### 6. Privacy Audit Matrix & Preprod Explorer Stream
+A side-by-side verification matrix showing exactly what the public ledger records vs. what remains shielded:
+
+<p align="center">
+  <img src="docs/screenshots/privacy_explorer_tab.png" alt="AuraVote Zero-Knowledge Privacy Matrix" width="100%" />
+</p>
+
+- **Interactive Demo Walkthrough Video**: [docs/media/auravote-demo.webp](docs/media/auravote-demo.webp)
+
+---
+
 ## 🛠️ Local Setup & Getting Started
 
 ### Prerequisites
@@ -156,6 +192,16 @@ npm test
 npm run deploy:preprod
 ```
 
+### 5. Launch Interactive Frontend UI
+```bash
+# Start local Vite development server
+npm run dev
+# App will be accessible at http://localhost:5173
+
+# Build production bundle for static hosting (Vercel / Netlify / GitHub Pages)
+npm run build:frontend
+```
+
 ---
 
 ## 📂 Project Structure
@@ -173,7 +219,12 @@ auravote/
 │       ├── keys/                  # SNARK prover and verifier keys (.prover, .verifier)
 │       └── zkir/                  # Zero-Knowledge Intermediate Representation (.zkir)
 ├── docs/
-│   └── screenshots/               # High-res SVG proof captures of terminal outputs
+│   ├── media/                     # Walkthrough demo video recording (auravote-demo.webp)
+│   └── screenshots/               # High-res SVG & PNG proof captures
+│       ├── app_initial_load.png
+│       ├── zk_modal_success.png
+│       ├── allowlist_tab.png
+│       ├── privacy_explorer_tab.png
 │       ├── compile_output.svg
 │       ├── deployment_output.svg
 │       └── test_output.svg
@@ -182,8 +233,13 @@ auravote/
 │   ├── deploy-preprod.ts          # Deployment script targeting Midnight Preprod
 │   └── generate-proof-assets.mjs  # SVG screenshot asset generator
 ├── src/
+│   ├── frontend/
+│   │   ├── main.ts                # Application coordinator, DOM handlers, and tabs
+│   │   ├── wallet.ts              # Midnight Lace DApp connector integration
+│   │   └── zk-prover.ts           # Client-side ZK proof synthesizer & nullifier logic
 │   └── test/
 │       └── auravote.test.ts       # 9/9 Vitest tests covering ZK, state, and nullifiers
+├── index.html                     # Premium Obsidian Cipher dark-mode UI
 ├── package.json
 ├── tsconfig.json
 ├── vitest.config.ts
@@ -195,9 +251,11 @@ auravote/
 ## 🌕 Lunar Cycle Roadmap
 
 - [x] **🌑 Level 1 - New Moon**: Toolchain setup, Compact contract written, compiled `managed/` circuits + keys, 9/9 tests passing, deployed to Preprod, detailed architecture README.
-- [ ] **🌒 Level 2 - Waxing Crescent**: Frontend integration with Lace wallet connection on Preprod, interactive ballot casting UI, observable privacy demonstration.
+- [x] **🌒 Level 2 - Waxing Crescent**: Frontend integration with Lace wallet connection on Preprod, interactive ballot casting UI, observable privacy demonstration, demo recording.
 - [ ] **🌓 Level 3 - First Quarter**: Production-grade dApp, CI/CD pipeline (GitHub Actions), submission proposal for "The Turn" (Private Voting problem statement).
 - [ ] **🌔 Level 4 - Waxing Gibbous**: MVP live on Preprod, public product profile, and technical documentation.
+- [ ] **🌕 Level 5 - Full Moon**: User testing with living feedback loop and 50 Preprod users.
+- [ ] **🌝 Level 6 - Supermoon**: Mainnet deployment and launch.
 - [ ] **🌕 Level 5 - Full Moon**: User testing with living feedback loop and 50 Preprod users.
 - [ ] **🌝 Level 6 - Supermoon**: Mainnet deployment and launch.
 
