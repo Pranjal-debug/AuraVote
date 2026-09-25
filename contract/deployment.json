@@ -1,0 +1,22 @@
+{
+  "contractName": "AuraVote",
+  "contractAddress": "027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934",
+  "network": "preprod",
+  "deployerPublicKey": "03fc9b1ce29b7fd9009c3dae87200600f28a9c13c71a17409acc03be95b3cd14db",
+  "transactionHash": "0xfe1991302a1c0db06d4b1239f8e538cf4711f42ed26ce610708b786c220bcd02",
+  "blockHeight": 2841920,
+  "deployedAt": "2026-09-25T13:57:14.215Z",
+  "circuitsDeployed": [
+    "cast_vote",
+    "register_voter",
+    "close_election"
+  ],
+  "initialLedger": {
+    "electionId": "0x9498bf6cd2e92eb42aa88c93c31c9a943f924ce902d65d969cec159949c8c596",
+    "yesVotes": 0,
+    "noVotes": 0,
+    "totalBallots": 0,
+    "isClosed": false
+  },
+  "explorerUrl": "https://explorer.preprod.midnight.network/contract/027562d726f492a9fcca3c4ed7f9e20bdc2846dcaaa17b7d80bc832515dbe00934"
+}
