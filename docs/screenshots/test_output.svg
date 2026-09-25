@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="880" height="642" viewBox="0 0 880 642" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="880" height="642" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<svg width="880" height="906" viewBox="0 0 880 906" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="880" height="906" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <!-- Window Header -->
   <rect width="880" height="44" rx="12" fill="#161b22"/>
   <rect y="42" width="880" height="2" fill="#30363d"/>
@@ -18,7 +18,7 @@
     <text x="24" y="178" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
     <text x="24" y="200" fill="#38bdf8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="600"> RUN  v2.1.9 D:/downloads/Movies/rise in/(admin2)</text>
     <text x="24" y="222" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
-    <text x="24" y="244" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"> ✓ src/test/auravote.test.ts (9 tests) 28ms</text>
+    <text x="24" y="244" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"> ✓ src/test/auravote.test.ts (9 tests) 29ms</text>
     <text x="24" y="266" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ 1. Toolchain &amp; Managed Artifacts Verification</text>
     <text x="24" y="288" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should have the generated managed/ directory with all required subdirectories</text>
     <text x="24" y="310" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should contain compiled ZKIR circuits for all exported circuits</text>
@@ -32,9 +32,21 @@
     <text x="24" y="486" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should simulate successful ballot tallying and prevent duplicate nullifiers</text>
     <text x="24" y="508" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should enforce election closure restrictions</text>
     <text x="24" y="530" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
-    <text x="24" y="552" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"> Test Files  1 passed (1)</text>
-    <text x="24" y="574" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">      Tests  9 passed (9)</text>
-    <text x="24" y="596" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   Start at  19:26:53</text>
-    <text x="24" y="618" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   Duration  2.96s (tests 28ms)</text>
+    <text x="24" y="552" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"> ✓ src/test/integration.test.ts (7 tests) 5045ms</text>
+    <text x="24" y="574" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ 1. Wallet Connector Lifecycle</text>
+    <text x="24" y="596" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should initialize disconnected by default and connect with Preprod addresses</text>
+    <text x="24" y="618" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should handle wallet disconnection cleanly</text>
+    <text x="24" y="640" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ 2. Client-Side ZK Prover &amp; Circuit Pipeline</text>
+    <text x="24" y="662" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should generate valid deterministic nullifiers with domain separation</text>
+    <text x="24" y="684" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should derive identity commitments for enrollment into the Merkle tree</text>
+    <text x="24" y="706" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should execute end-to-end ballot casting circuit with live progress notifications</text>
+    <text x="24" y="728" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should enforce double-voting rejection when the same secret attempts to vote again</text>
+    <text x="24" y="750" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   ✓ 3. Allowlist Registration &amp; Merkle Tree Growth</text>
+    <text x="24" y="772" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">     ✓ should enroll new voter commitments into the Historic Merkle Tree</text>
+    <text x="24" y="794" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"></text>
+    <text x="24" y="816" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal"> Test Files  2 passed (2)</text>
+    <text x="24" y="838" fill="#4ade80" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">      Tests  16 passed (16)</text>
+    <text x="24" y="860" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   Start at  19:48:43</text>
+    <text x="24" y="882" fill="#d4d4d4" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="13" font-weight="normal">   Duration  6.40s (tests 5.07s)</text>
   </g>
 </svg>

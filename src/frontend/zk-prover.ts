@@ -34,7 +34,8 @@ export class AuraVoteZKProver {
   private transactions: BallotTransaction[];
 
   constructor() {
-    const savedState = localStorage.getItem('auravote_ledger_state');
+    const isBrowser = typeof localStorage !== 'undefined';
+    const savedState = isBrowser ? localStorage.getItem('auravote_ledger_state') : null;
     if (savedState) {
       this.ledgerState = JSON.parse(savedState);
     } else {
@@ -56,7 +57,7 @@ export class AuraVoteZKProver {
       };
     }
 
-    const savedTxs = localStorage.getItem('auravote_transactions');
+    const savedTxs = isBrowser ? localStorage.getItem('auravote_transactions') : null;
     if (savedTxs) {
       this.transactions = JSON.parse(savedTxs);
     } else {
@@ -175,8 +176,10 @@ export class AuraVoteZKProver {
     };
 
     this.transactions.unshift(newTx);
-    localStorage.setItem('auravote_ledger_state', JSON.stringify(this.ledgerState));
-    localStorage.setItem('auravote_transactions', JSON.stringify(this.transactions));
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('auravote_ledger_state', JSON.stringify(this.ledgerState));
+      localStorage.setItem('auravote_transactions', JSON.stringify(this.transactions));
+    }
 
     return { txHash, nullifier };
   }
@@ -184,7 +187,9 @@ export class AuraVoteZKProver {
   // Register voter commitment in allowlist tree
   public registerVoter(commitment: string): { success: boolean; leafIndex: number } {
     this.ledgerState.merkleTreeLeaves++;
-    localStorage.setItem('auravote_ledger_state', JSON.stringify(this.ledgerState));
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('auravote_ledger_state', JSON.stringify(this.ledgerState));
+    }
     return {
       success: true,
       leafIndex: this.ledgerState.merkleTreeLeaves

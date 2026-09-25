@@ -161,7 +161,7 @@ const testLines = [
   "",
   " RUN  v2.1.9 D:/downloads/Movies/rise in/(admin2)",
   "",
-  " ✓ src/test/auravote.test.ts (9 tests) 28ms",
+  " ✓ src/test/auravote.test.ts (9 tests) 29ms",
   "   ✓ 1. Toolchain & Managed Artifacts Verification",
   "     ✓ should have the generated managed/ directory with all required subdirectories",
   "     ✓ should contain compiled ZKIR circuits for all exported circuits",
@@ -175,10 +175,22 @@ const testLines = [
   "     ✓ should simulate successful ballot tallying and prevent duplicate nullifiers",
   "     ✓ should enforce election closure restrictions",
   "",
-  " Test Files  1 passed (1)",
-  "      Tests  9 passed (9)",
-  "   Start at  19:26:53",
-  "   Duration  2.96s (tests 28ms)"
+  " ✓ src/test/integration.test.ts (7 tests) 5045ms",
+  "   ✓ 1. Wallet Connector Lifecycle",
+  "     ✓ should initialize disconnected by default and connect with Preprod addresses",
+  "     ✓ should handle wallet disconnection cleanly",
+  "   ✓ 2. Client-Side ZK Prover & Circuit Pipeline",
+  "     ✓ should generate valid deterministic nullifiers with domain separation",
+  "     ✓ should derive identity commitments for enrollment into the Merkle tree",
+  "     ✓ should execute end-to-end ballot casting circuit with live progress notifications",
+  "     ✓ should enforce double-voting rejection when the same secret attempts to vote again",
+  "   ✓ 3. Allowlist Registration & Merkle Tree Growth",
+  "     ✓ should enroll new voter commitments into the Historic Merkle Tree",
+  "",
+  " Test Files  2 passed (2)",
+  "      Tests  16 passed (16)",
+  "   Start at  19:48:43",
+  "   Duration  6.40s (tests 5.07s)"
 ];
 
 fs.writeFileSync(

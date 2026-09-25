@@ -26,9 +26,11 @@ export class MidnightLaceConnector {
 
   constructor() {
     this.checkExtension();
-    const stored = localStorage.getItem('auravote_wallet_connected');
-    if (stored === 'true') {
-      this.state.isConnected = true;
+    if (typeof localStorage !== 'undefined') {
+      const stored = localStorage.getItem('auravote_wallet_connected');
+      if (stored === 'true') {
+        this.state.isConnected = true;
+      }
     }
   }
 
@@ -52,7 +54,7 @@ export class MidnightLaceConnector {
   }
 
   public async connect(): Promise<WalletState> {
-    const win = window as any;
+    const win = typeof window !== 'undefined' ? (window as any) : {};
     if (win.midnight?.mnLace) {
       try {
         const api = await win.midnight.mnLace.enable();
@@ -66,14 +68,18 @@ export class MidnightLaceConnector {
     }
 
     this.state.isConnected = true;
-    localStorage.setItem('auravote_wallet_connected', 'true');
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('auravote_wallet_connected', 'true');
+    }
     this.notify();
     return this.state;
   }
 
   public disconnect(): WalletState {
     this.state.isConnected = false;
-    localStorage.removeItem('auravote_wallet_connected');
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('auravote_wallet_connected');
+    }
     this.notify();
     return this.state;
   }
